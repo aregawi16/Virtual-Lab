@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ሃይድሮሊክ ፕረስ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		canvas{
+			background-color:  #F0FFFF ;
+		}
+		#start{
+			position: absolute;
+			width: 70px;
+			height: 30px;
+			left:250px;
+			top:585px;
+			font-size: 25px;
+		}
+		#reset{
+			position:absolute;
+			width: 75px;
+			height: 30px;
+			left:350px;
+			top:585px;
+			font-size: 25px;
+		}
+		#selectMass{
+			position: absolute;
+			font-size: 20px;
+			top: 100px;
+			left: 400px;
+			width: 200px;
+			height: 30px;
+			border-radius: 10px;
+		}
+		#enterMass{
+			position: absolute;
+			font-size: 20px;
+			top: 80px;
+			left: 100px;
+			width: 150px;
+			height: 30px;
+			border-radius: 10px;
+
+		}
+		#btn{
+			position: absolute;
+			font-size: 20px;
+			top: 100px;
+			left: 160px;
+			width: 70px;
+			height: 35px;
+			border-radius: 10px;
+			background-color: blue;
+
+		}
+	
+
+	</style>
+</head>
+<body>
+<p id="stop"></p>
+<canvas></canvas>
+<select id="enterMass" onchange="enterMass()">
+	<option value="0">ዝተፈላለየ ክብደት ምረጽ</option>
+	<option value="1">1 ኪ.ግ</option>
+	<option value="2">2 ኪ.ግ</option>
+	<option value="3">3 ኪ.ግ</option>
+	<option value="4">4 ኪ.ግ</option>
+	<option value="5">5 ኪ.ግ</option>
+</select>
+
+<!-- <button id="btn" onclick="getMass()">Enter</button>
+ --><select id="selectMass" onchange="selectMass()">
+	<option value="0">ዝተፈላለየ ክብደት ምረጽ</option>
+	<option value="300">300 ኪ.ግ</option>
+	<option value="400">400 ኪ.ግ</option>
+	<option value="500">500 ኪ.ግ</option>
+	<option value="600">600 ኪ.ግ</option>
+	<option value="700">700 ኪ.ግ</option>
+
+</select>
+<button id="reset" onclick="resetHydroulic1()">Reset</button>
+<script type="text/javascript" src="Hydroulic.js"> </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title> ስሩዕ ምንቅስቃስ</title>
+	<style type="text/css">
+		canvas{
+
+			border: 5px solid #8B0000;
+			position: absolute;
+        background-image: linear-gradient(white,#FFFAFA,#00FF7F,#00FF7F,#20B2AA,green);
+
+			top: 20px;
+			left:50px;
+		}
+    #road{
+      position: absolute;
+      top: 65px;
+      left:52px;
+      width:990px;
+      height: 20px;
+              background-image: linear-gradient(black,  #808080,black);
+
+    }
+    input{
+      width: 50px;
+       height: 20px;
+      border-radius: 5px;
+
+    }
+    select{
+      position: absolute;
+
+      left: 50px;
+      top: 50px; 
+      border-radius: 5px;
+
+    }
+    fieldset{
+      color:black;
+      width: 150px;
+      height: 270px;
+    }
+    p{
+      color:black;
+      font-family: bold;
+font-family: "Times New Roman", Times, serif;
+      font-size: 19px;
+    }
+		#A{
+			 position: absolute;
+              top:90px;
+              left: 150px;
+              width: 50px;
+              height: 20px;
+              
+             border-radius: 5px;
+		}
+		#U{
+			 position: absolute;
+              top:130px;
+              left: 170px;
+              width: 50px;
+              height: 20px;
+              
+                            border-radius: 5px;
+		}
+		#V{
+			 position: absolute;
+              top:170px;
+              left: 170px;
+              width: 50px;
+              height: 20px;
+              
+                            border-radius: 5px;
+		}
+		#T{
+			 position: absolute;
+              top:210px;
+              left: 170px;
+              width: 50px;
+              height: 20px;
+              
+                            border-radius: 5px;
+		}
+		#vel{
+              position: absolute;
+              top:90px;
+              left: 90px;
+              width: 50px;
+              height: 20px;
+                            border-radius: 5px;
+
+
+		}
+		#distance{
+              position: absolute;
+              top:130px;
+              left: 90px;
+              width: 50px;
+              height: 20px;
+                            border-radius: 5px;
+
+          }
+          #time{
+              position: absolute;
+              top:170px;
+              left: 90px;
+              width: 50px;
+              height: 20px;
+                        border-radius: 5px;
+}
+		.form{
+			position: absolute;
+			top:350px;
+			left: 50px;
+			width:600px;
+			height: 230px;
+
+			/*//background-color: #124532;*/
+
+
+		}
+		.form2{
+      position: absolute;
+      top:350px;
+      left: 450px;
+      width:288px;
+      height: 230px;
+      background-color: #001122;
+
+
+    }
+    
+          
+          #stpBtn{
+			position: absolute;
+              top:150px;
+              left:190px;
+              padding: 1px;
+              /*width: 55px;
+              height: 30px;*/
+              border-radius: 5px;
+              font-size: 18px;
+/*background-color: #4286f4;
+*/          }
+          #strBtn{
+          	position: absolute;
+              top:150px;
+              left:310px;
+              /*width: 55px;
+              height: 30px;*/
+              padding: 1px;
+              border-radius: 5px;
+              font-size: 18px;
+/*              background-color: #4286f4;
+*/          }
+          #resetBtn{
+            position: absolute;
+              top:150px;
+              left:250px;
+            /*  width: 55px;
+              height: 30px;*/
+              padding: 1px;
+              border-radius: 5px;
+              font-size: 18px;
+/*              background-color: #4286f4;
+*/          }
+          #p1{
+          	position: absolute;
+          	top: 80px;
+          	font-size: 25px;
+          
+          }
+          #p2{
+          	position: absolute;
+          	top: 120px;
+          	font-size: 25px;
+          	
+          }
+          #p3{
+          	position: absolute;
+          	top: 160px;
+          	font-size: 25px;
+          		
+          }
+          #p4{
+          	position: absolute;
+          	top: 80px;
+          	left:100px;
+          	font-size: 25px;
+          		
+          }
+          #p5{
+          	position: absolute;
+          	top: 120px;
+          	left:70px;
+          	font-size: 25px;
+          		
+          }
+          #p6{
+          	position: absolute;
+          	top: 160px;
+          	left:70px;
+          	font-size: 25px;
+          	
+          }
+#p7{
+          	position: absolute;
+          	top: 200px;
+          	left:110px;
+          	font-size: 25px;
+          }
+          .div1{
+            position: absolute;
+             height: 175px;
+            width: 215px;
+            top: 0px;
+            left:5px;
+
+          }
+          .div2{
+            position: absolute;
+            height: 175px;
+            width: 200px;
+            top: 0px;
+            left:350px;
+
+          }
+
+
+		
+	</style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body onload="init()">
+<div class="container">
+  <canvas ></canvas><br>
+<div class="form">
+
+	<!-- <form>
+<select id="mySelect" onchange="choose()">
+	<option value="choose">Choose</option>
+  <option value="0">Non accelerated</option>
+  <option value="1">Acclerated</option>
+  </select>
+</form> -->
+
+<div class="div1">
+<form >
+  <fieldset >
+    <legend style="color: black; font-family: Algerian">NonAccelerated</legend>
+
+  <select id="mySelectV" onchange="choose()">
+      <option value="0">ዝድለ?</option>
+      <option value="1">ፍጥነት</option>
+      <option value="2">ርሕቀት</option>
+      <option value="3"> ግዜ</option>
+
+    </select>
+  
+
+<!--   <p id="p1" >ፍጥነት</p>  <input  type="number" min="0" id="vel" ><br>
+ --> 
+ 
+<p id="try1"></p>
+<p id="try2"></p>
+<p id="try3"></p>
+
+ </fieldset>
+  </form>
+  </div>
+  <!-- <button type="reset" onclick="reset()" id="rstBtn" >Stop</button>
+   <button id="solveVBtn" onclick="calculateV()">Solve</button>
+ --><div class="div2">
+<form>
+  <fieldset>
+    <legend style="color: black;font-family: Algerian">Accelerated</legend>
+    <select id="mySelectA" onchange="choose()">
+      <option value="0">ዝድለ?</option>
+      <option value="4">ናህሪ</option>
+      <option value="5">ፍጥነት1</option>
+      <option value="6">ፍጥነት 2</option>
+      <option value="7"> ግዜ</option>
+      <option value="8">ርሕቀት</option>
+
+
+    </select>
+    <p id="try4"></p>
+<p id="try5"></p>
+<p id="try6"></p>
+<p id="try7"></p>
+<p id="try8"></p>
+
+
+ </fieldset>
+</form>
+ </div>
+<button type="reset" onclick="stopFun()" id="stpBtn" class="btn btn-danger">stop</button>
+<button type="reset" onclick="startFun()" id="strBtn" class="btn btn-warning">start</button>
+<button type="reset" onclick="resetFun()" id="resetBtn"  class="btn btn-primary">reset</button>
+
+</div>
+
+<script type="text/javascript" src="motion.js">  
+</script>
+<div id="road"></div>
+</div>
+</body>
+</html>

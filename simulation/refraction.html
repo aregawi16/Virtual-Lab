@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Refraction</title>
+	<style type="text/css">
+		canvas{
+              /* background-image: url("park.jpg");
+*/             background-color: #eeddff  ;
+
+		}
+		#medium{
+			position: absolute;
+			top:100px;
+			left:400px;
+			width: 200px;
+			height: 30px;
+			font-size: 20px;
+			border-radius: 5px;}
+			#strbtn{
+
+            position: absolute;
+			width: 55px;
+			height: 30px;
+			top: 500px;
+						background-color: #2980B9;
+
+			left:200px;
+			font-size: 20px;
+			border-radius: 5px;
+}
+
+
+	</style>
+</head>
+<body>
+<canvas></canvas>
+<select id="medium" onchange="selectMedium()">
+		<option value="0">Choose medium</option>
+	<option value="1">vacuum to glass</option>
+	<option value="2">vaccum to liquid</option>
+	<option value="3">vacuum to air</option>
+</select>
+<button onclick="startFun()" id="strbtn" > Start</button>
+<script type="text/javascript" src="refraction.js"></script>
+</body>
+</html>

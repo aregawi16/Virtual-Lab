@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Cocave Lense
+	</title>
+	<style type="text/css">
+		canvas{
+			background-color: #66cdaa;
+		}
+		#chooseFL{
+			position: absolute;
+			top:100px;
+			left:100px;
+			width: 200px;
+			height: 30px;
+			border-radius: 5px;
+			font-size: 20px;
+		}
+		#stpbtn{
+
+            position: absolute;
+			width: 55px;
+			height: 30px;
+			top: 500px;
+			left:250px;
+			font-size: 20px;
+			border-radius: 5px;
+
+		}
+		#rstbtn{
+
+            position: absolute;
+			width: 62px;
+			height: 30px;
+			top: 500px;
+			left:325px;
+			font-size: 20px;
+			border-radius: 5px;
+
+		}
+		#strbtn{
+
+            position: absolute;
+			width: 55px;
+			height: 30px;
+			top: 500px;
+			left:400px;
+			font-size: 20px;
+			border-radius: 5px;
+
+		}
+	</style>
+</head>
+<body>
+	
+<canvas></canvas>
+<select id="chooseFL" onchange="chooseFL()">
+	<option value="0">select focalLength</option>
+	<option value="1">Any position in front of the lense</option>
+	
+</select>
+<button onclick="stopFun()" id="stpbtn" > Stop</button>
+<button onclick="resetFun()" id="rstbtn" > Reset</button>
+<button onclick="startFun()" id="strbtn" > Start</button>
+<p id="conv"><button onclick="convexLense()" id="convex" >Convex Lense</button></p>
+<p id="conc"><button onclick="concaveLense()" id="concave" >Concave Lense</button></p>
+<script type="text/javascript" src="concave.js">
+ </script>
+</body>
+</html>
